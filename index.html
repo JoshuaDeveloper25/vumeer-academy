@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vumeer Academy</title>
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/358a708f7a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#089D3C",
+              "secondary-color": "#EB670A",
+              "tertiary-color": "#727272",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tailwind Plugins and Custom -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .container-page {
+          @apply max-w-[1200px] mx-auto;
+        }
+
+        .active-page {
+          @apply border-b-4 border-primary-color pb-1 rounded-sm text-tertiary-color;
+        }
+
+        .inactive-page {
+          @apply text-tertiary-color;
+        }
+
+        .btn {
+          @apply inline-block rounded-2xl font-bold px-5 py-1;
+        }
+
+        .btn-orange {
+          @apply bg-secondary-color text-white;
+        }
+
+        .btn-orange-white {
+          @apply bg-white text-secondary-color;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="xl:overflow-x-visible overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="container-page px-3 py-4">
+      <!-- Desktop -->
+      <div class="sm:flex hidden items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <ul class="flex gap-10">
+          <li><a class="active-page" href="index.html">Home</a></li>
+          <li><a class="inactive-page" href="nosotros.html">Nosotros</a></li>
+          <li><a class="inactive-page" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Responsive -->
+      <div class="sm:hidden flex items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="flex sm:hidden">
+          <button type="button" onclick="toggleHamburguerMenu()">
+            <i
+              id="hamburguerIcon"
+              class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
+            ></i>
+            <i
+              id="closeIcon"
+              class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="linkPages"
+        class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
+      >
+        <div class="flex justify-center gap-6">
+          <a class="active-page" href="index.html">Home</a>
+          <a class="inactive-page" href="nosotros.html">Nosotros</a>
+          <a class="inactive-page" href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container-page px-3 py-8">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
+        <article class="md:order-0 order-1">
+          <h1 class="text-4xl text-primary-color font-bold">
+            Bienvenidos a la <span class="block">Academia Vumeer</span>
+          </h1>
+
+          <h3 class="text-lg text-tertiary-color">
+            Domina el Mundo del E-commerce con Nosotros
+          </h3>
+
+          <p class="text-tertiary-color text-sm my-6">
+            En la
+            <span class="text-primary-color font-bold">Academia Vumeer</span>,
+            te ofrecemos una formación integral en e-commerce para que puedas
+            convertirte en un experto y
+            <span class="text-primary-color font-bold"
+              >llevar tu negocio al siguiente nivel.</span
+            >
+            Con un enfoque práctico y actual, nuestros cursos están diseñados
+            para brindarte todo lo que necesitas saber para
+            <span class="text-primary-color font-bold">
+              triunfar en el competitivo mundo del comercio electrónico.
+            </span>
+          </p>
+
+          <a href="#" class="btn btn-orange">Empieza ahora</a>
+
+          <img
+            src="/assets/icons/3-down-arrows.png"
+            class="md:ms-32 ms-auto me-auto mt-14 w-12"
+            decoding="async"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="md:order-1 order-0 max-w-xl mx-auto">
+          <img
+            src="/assets/img/home-header.png"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </article>
+      </div>
+    </header>
+
+    <!-- Features -->
+    <section class="features-bg md:mt-72 mt-44">
+      <div class="container-page px-3 py-8">
+        <div class="max-w-3xl mx-auto -mt-56">
+          <img
+            src="/assets/img/dashboard.png"
+            class="w-full h-full translate-up"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex justify-center flex-wrap gap-10 text-center mt-20">
+          <article class="max-w-[20rem] text-white translate-left">
+            <img
+              src="/assets/icons/features1.png"
+              class="w-24 mx-auto"
+              decoding="async"
+              loading="lazy"
+            />
+            <h2 class="font-bold mt-2">Contenido Actualizado</h2>
+            <p class="text-sm">
+              Nuestros cursos se mantienen al día con las últimas tendencias y
+              tecnologías del e-commerce.
+            </p>
+          </article>
+
+          <article class="max-w-[20rem] text-white translate-down">
+            <img
+              src="/assets/icons/features2.png"
+              class="w-24 mx-auto"
+              decoding="async"
+              loading="lazy"
+            />
+            <h2 class="font-bold mt-2">Expertos en la Industria</h2>
+            <p class="text-sm">
+              Aprende de profesionales con amplia experiencia y éxito comprobado
+              en el sector.
+            </p>
+          </article>
+
+          <article class="max-w-[20rem] text-white translate-right">
+            <img
+              src="/assets/icons/features3.png"
+              class="w-24 mx-auto"
+              decoding="async"
+              loading="lazy"
+            />
+            <h2 class="font-bold mt-2">Metodología Práctica</h2>
+            <p class="text-sm">
+              Accede a casos de estudio reales, ejercicios prácticos y
+              herramientas que podrás aplicar inmediatamente.
+            </p>
+          </article>
+
+          <article class="max-w-[20rem] text-white translate-down">
+            <img
+              src="/assets/icons/features4.png"
+              class="w-24 mx-auto"
+              decoding="async"
+              loading="lazy"
+            />
+            <h2 class="font-bold mt-2">Comunidad de Apoyo</h2>
+            <p class="text-sm">
+              Únete a una red de emprendedores y profesionales que comparten tus
+              intereses y desafíos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Qué Ofrecemos? -->
+    <section class="container-page px-3 py-8">
+      <h2 class="text-center text-primary-color font-bold text-4xl mb-12">
+        ¿Qué Ofrecemos?
+      </h2>
+
+      <article
+        class="flex flex-col md:flex-row md:gap-14 gap-4 items-center mb-8"
+      >
+        <div class="flex-1 translate-left">
+          <img
+            src="/assets/img/offer1.jpg"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex-1 translate-right">
+          <h3 class="font-bold text-secondary-color text-xl">
+            Clases 100% online
+          </h3>
+          <p class="text-tertiary-color">
+            Aprende de Expertos +7 Cifras en ventas, Encuentra el curso que se
+            ajuste a tus necesidades, desde básico hasta avanzado
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="flex flex-col md:flex-row-reverse md:gap-14 gap-4 items-center mb-8"
+      >
+        <div class="flex-1 translate-right">
+          <img
+            src="/assets/img/offer2.jpg"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex-1 translate-left">
+          <h3 class="font-bold text-secondary-color text-xl">Clase en Vivo</h3>
+          <p class="text-tertiary-color">
+            Participa en sesiones interactivas y resuelve tus dudas en tiempo
+            real.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="flex flex-col md:flex-row md:gap-14 gap-4 items-center mb-8"
+      >
+        <div class="flex-1 translate-left">
+          <img
+            src="/assets/img/offer3.jpg"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex-1 translate-right">
+          <h3 class="font-bold text-secondary-color text-xl">Bono Exclusivo</h3>
+          <p class="text-tertiary-color">
+            Theme Premium "Gratis", Acceso a proveedor de productos, Tips para
+            conseguir proveedores y recomendación de mensajearía (Courier) de
+            confianza.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="flex flex-col md:flex-row-reverse md:gap-14 gap-4 items-center mb-8"
+      >
+        <div class="flex-1 translate-right">
+          <img
+            src="/assets/img/offer4.jpg"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex-1 translate-left text-end">
+          <h3 class="font-bold text-secondary-color text-xl">
+            Fuente de ingreso Extra
+          </h3>
+          <p class="text-tertiary-color">
+            Por recomendación obtén un beneficio Cash Out «Sobre esto Obtén información con nuestro equipo de soporte
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Transforma tu Negocio Hoy -->
+    <section class="company-bg">
+      <div class="flex flex-col md:flex-row gap-4 items-center mb-8">
+        <article class="flex-1 translate-left max-w-2xl -mt-10">
+          <img
+            src="/assets/img/boxes-cart.png"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="flex-1 text-end md:pe-20 pe-8 pb-8">
+          <h3 class="text-white font-bold text-[2.7rem]">
+            Transforma tu Negocio Hoy
+          </h3>
+
+          <p class="text-white text-sm max-w-md ml-0 ms-auto my-5">
+            En la Academia Vumeer, estamos comprometidos con tu éxito. Ya sea
+            que estés empezando tu tienda online o buscando optimizar un negocio
+            existente, nuestros recursos y expertos te guiarán en cada paso del
+            proceso. No esperes más, únete a nuestra comunidad y empieza a
+            transformar tu futuro en el e-commerce.
+          </p>
+
+          <button type="button" class="btn btn-orange-white">
+            Empieza Ahora
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Compromiso con tu éxito -->
+    <section
+      class="flex flex-col md:flex-row-reverse md:gap-14 gap-4 items-center mb-8"
+    >
+      <div class="flex-1 max-w-2xl">
+        <img
+          src="/assets/img/success.jpg"
+          class="w-full h-full"
+          decoding="async"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-1">
+        <div class="max-w-md mx-auto px-5">
+          <h3 class="font-bold text-primary-color text-4xl mb-3">
+            Compromiso con <span class="block">Tu Éxito</span>
+          </h3>
+          <p class="text-tertiary-color">
+            En la Academia Vumeer, nuestro principal objetivo es tu éxito.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publicidad -->
+    <section class="bg-[#282828] font-[900] text-center sm:text-8xl text-4xl py-7" style="overflow: hidden;">
+      <div class="text-nowrap">
+        <h2 class="text-white/20 mt-6 animated-text">
+          <span>C</span><span>R</span><span>E</span><span>A</span> <span class="text-white">C</span
+          ><span class="text-white">R</span><span class="text-white">E</span><span class="text-white">A</span> <span>C</span><span>R</span
+          ><span>E</span><span>A</span> <span>C</span><span>R</span><span>E</span
+          ><span>A</span>
+        </h2>
+  
+        <h2 class="text-white/20 mt-6 animated-text">
+          <span>G</span><span>E</span><span>S</span><span>T</span><span>I</span
+          ><span>O</span><span>N</span><span>A</span> <span class="text-white">G</span><span class="text-white">E</span
+          ><span class="text-white">S</span><span class="text-white">T</span><span class="text-white">I</span><span class="text-white">O</span><span class="text-white">N</span
+          ><span class="text-white">A</span>
+        </h2>
+  
+        <h2 class="text-white/20 mt-6 animated-text">
+          <span>V</span><span>E</span><span>N</span><span>D</span><span>E</span>
+            <span class="text-white">V</span><span class="text-white">E</span><span class="text-white">N</span><span class="text-white">D</span
+            ><span class="text-white">E</span></span>
+          <span>V</span><span>E</span><span>N</span><span>D</span><span>E</span>
+        </h2>
+  
+        <h2 class="text-white/20 mt-6 animated-text">
+          <span class="text-white">V</span><span class="text-white">U</span><span class="text-white">M</span><span class="text-white">M</span><span class="text-white">E</span
+          ><span class="text-white">R</span> <span>V</span><span>U</span><span>M</span><span>M</span><span>E</span
+            ><span>R</span> <span>V</span><span>U</span><span>M</span><span>M</span><span>E</span
+              ><span>R</span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- ¡Tu camino hacia el éxito comienza aquí! -->
+    <section class="container-page px-3 py-14">
+      <div class="flex flex-col justify-center items-center gap-7">
+        <div class="max-w-2xl mx-auto">
+          <img
+            src="/assets/img/success-path.png"
+            class="w-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+
+        <button type="button" class="btn btn-orange">Empieza ahora</button>
+      </div>
+    </section>
+
+    <!-- Nuestros paquetes -->
+    <section class="container-page px-3 md:my-12 my-5 translate-from-top-to-down">
+      <h2 class="text-primary-color font-bold text-4xl text-center">
+        Nuestros paquetes
+      </h2>
+
+      <div class="flex justify-center my-8">
+        <div class="flex-1 text-center">
+          <h3
+            class="text-tertiary-color cursor-pointer"
+            onclick="showPlan('mensual')"
+          >
+            Mensual
+          </h3>
+          <div
+            class="rounded-md bg-secondary-color w-full h-2"
+            id="mensualTab"
+          ></div>
+        </div>
+
+        <div class="flex-1 text-center">
+          <h3
+            class="text-tertiary-color cursor-pointer"
+            onclick="showPlan('anual')"
+          >
+            Anual
+          </h3>
+          <div class="rounded-md bg-[#D9D9D9] w-full h-2" id="anualTab"></div>
+        </div>
+      </div>
+
+      <!-- Mensual Plan -->
+      <article
+        id="mensualPlan"
+        class="max-w-sm mx-auto rounded-md border-2 border-secondary-color mt-24"
+      >
+        <div class="text-center -mt-11">
+          <div
+            class="text-white text-center rounded-xl inline-block bg-secondary-color px-8 py-3"
+          >
+            <h2 class="text-4xl font-[900]">€15.00</h2>
+            <h4>Mes</h4>
+          </div>
+        </div>
+
+        <div>
+          <div class="my-5 text-center">
+            <h3 class="font-bold text-xl text-secondary-color">
+              Clases Online 100% Online
+            </h3>
+            <h4 class="text-xs text-secondary-color">Ahorro anual 34.85€</h4>
+          </div>
+
+          <ul class="sm:px-16 px-8 text-sm list-disc text-tertiary-color mb-8">
+            <li>Creación de tienda</li>
+            <li>Configuración de la tienda</li>
+            <li>Aplicativo para incrementar Ventas</li>
+            <li>Creación de Business Comercial</li>
+            <li>Creación de Cuenta Publicitaria</li>
+            <li>Creación de Pixel + Vinculación</li>
+            <li>Como subir un producto a tu tienda</li>
+            <li>Estrategia de venta Upsell</li>
+            <li>Segmentación con o sin "intereses"</li>
+            <li>Como vender de 0 a 100, 200, 500 y 1000 pedidos al día.</li>
+            <li>Proveedor de productos y como buscarlo</li>
+            <li>Contacto Mensajería "Courier" y como buscarlo</li>
+            <li>BONO: Theme de Paga Premium "Gratis"</li>
+          </ul>
+        </div>
+
+        <button
+          class="bg-secondary-color font-bold text-white py-4 w-full rounded-b-sm"
+        >
+          Escoger plan
+        </button>
+      </article>
+
+      <!-- Anual Plan -->
+      <article
+        id="anualPlan"
+        class="max-w-sm mx-auto rounded-md border-2 border-secondary-color mt-24 hidden"
+      >
+        <div class="text-center -mt-11">
+          <div
+            class="text-white text-center rounded-xl inline-block bg-secondary-color px-8 py-3"
+          >
+            <h2 class="text-4xl font-[900]">€150.00</h2>
+            <h4>Año</h4>
+          </div>
+        </div>
+
+        <div>
+          <div class="my-5 text-center">
+            <h3 class="font-bold text-xl text-secondary-color">
+              Clases Online 100% Online
+            </h3>
+            <h4 class="text-xs text-secondary-color">Ahorro anual 100.00€</h4>
+          </div>
+
+          <ul class="sm:px-16 px-8 text-sm list-disc text-tertiary-color mb-8">
+            <li>Creación de tienda</li>
+            <li>Configuración de la tienda</li>
+            <li>Aplicativo para incrementar Ventas</li>
+            <li>Creación de Business Comercial</li>
+            <li>Creación de Cuenta Publicitaria</li>
+            <li>Creación de Pixel + Vinculación</li>
+            <li>Como subir un producto a tu tienda</li>
+            <li>Estrategia de venta Upsell</li>
+            <li>Segmentación con o sin "intereses"</li>
+            <li>Como vender de 0 a 100, 200, 500 y 1000 pedidos al día.</li>
+            <li>Proveedor de productos y como buscarlo</li>
+            <li>Contacto Mensajería "Courier" y como buscarlo</li>
+            <li>BONO: Theme de Paga Premium "Gratis"</li>
+          </ul>
+        </div>
+
+        <button
+          class="bg-secondary-color font-bold text-white py-4 w-full rounded-b-sm"
+        >
+          Escoger plan
+        </button>
+      </article>
+    </section>
+
+    <!-- Carta del Ceo & Fundador -->
+    <header class="container-page px-3 py-8 mt-20">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
+        <article class="md:order-0 order-1">
+          <h1 class="text-4xl text-primary-color font-bold">
+            Carta del CEO & <span class="block">Fundador</span>
+          </h1>
+
+          <h3 class="text-lg text-tertiary-color">
+            CEO & FUNDADOR: Liñan | Lord Dennis.
+          </h3>
+
+          <p class="text-tertiary-color text-sm mt-6">
+            La empresa a sido creado con el objetivo de poder ayudar a las
+            personas, hoy en día existen muchas personas que buscan aprender
+            E-Commerce pero no todas las empresas muestran transparencia, pero
+            en mi academia Vumeer lo cree específicamente para que aprendan los
+            pasos correctos en cómo crear una tienda virtual y también como
+            poder hacer Publicidad y lo mejor de todo es que puedas aprender en
+            poco tiempo.
+          </p>
+
+          <p class="text-tertiary-color text-sm my-6">
+            Si eres de las personas que busca una oportunidad de emprender, en
+            mi Academia Vumeer encontrarás una familia unida y así poder
+            ayudarte. Tenemos el soporte indicado para orientarte paso a paso y
+            no fracasar en el intento. 
+          </p>
+
+          <h4 class="font-bold text-xl text-primary-color">
+            ¡Te esperamos en Vumeer.com!
+          </h4>
+        </article>
+
+        <article class="md:order-1 order-0 max-w-xl mx-auto">
+          <img
+            src="/assets/img/fundador.png"
+            class="w-full h-full"
+            decoding="async"
+            loading="lazy"
+          />
+        </article>
+      </div>
+    </header>
+
+    <!-- Nuestro equipo -->
+    <section class="container-page px-3 py-8">
+      <h2 class="text-center text-primary-color font-bold text-4xl">
+        Nuestro equipo
+      </h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 mt-16">
+        <article>
+          <img
+            src="/assets/img/team1.png"
+            class="w-72 h-72 object-contain mx-auto rotate360"
+            decoding="async"
+            loading="lazy"
+          />
+
+          <div class="text-center px-5">
+            <h2 class="font-bold text-primary-color mt-2">Lord Dennis.</h2>
+            <p class="text-sm text-tertiary-color">
+              Mentor: | Experto en E-Commerce |
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="/assets/img/team2.png"
+            class="w-72 h-72 object-contain mx-auto rotate360"
+            decoding="async"
+            loading="lazy"
+          />
+
+          <div class="text-center px-5">
+            <h2 class="font-bold text-primary-color mt-2">Daniel Meza</h2>
+            <p class="text-sm text-tertiary-color">
+              Mentor: | Experto en E-Commerce |
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="/assets/img/team3.png"
+            class="w-72 h-72 object-contain mx-auto rotate360"
+            decoding="async"
+            loading="lazy"
+          />
+
+          <div class="text-center px-5">
+            <h2 class="font-bold text-primary-color mt-2">Antonio Yataco</h2>
+            <p class="text-sm text-tertiary-color">
+              Mentor: | Experto en E-Commerce |
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="/assets/img/team4.png"
+            class="w-72 h-72 object-contain mx-auto rotate360"
+            decoding="async"
+            loading="lazy"
+          />
+          <div class="text-center px-5">
+            <h2 class="font-bold text-primary-color mt-2">Rubén Viera</h2>
+            <p class="text-sm text-tertiary-color">| Country Manager |</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Import Javascript -->
+    <script defer src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vumeer Academy</title>
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/358a708f7a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#089D3C",
+              "secondary-color": "#EB670A",
+              "tertiary-color": "#727272",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tailwind Plugins and Custom -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .container-page {
+          @apply max-w-[1200px] mx-auto;
+        }
+
+        .active-page {
+          @apply border-b-4 border-primary-color pb-1 rounded-sm text-tertiary-color;
+        }
+
+        .inactive-page {
+          @apply text-tertiary-color;
+        }
+
+        .btn {
+          @apply inline-block rounded-2xl font-bold px-5 py-1;
+        }
+
+        .btn-orange {
+          @apply bg-secondary-color text-white;
+        }
+
+        .btn-orange-white {
+          @apply bg-white text-secondary-color;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="container-page px-3 py-4">
+      <!-- Desktop -->
+      <div class="sm:flex hidden items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <ul class="flex gap-10">
+          <li><a class="inactive-page" href="index.html">Home</a></li>
+          <li><a class="inactive-page" href="nosotros.html">Nosotros</a></li>
+          <li><a class="active-page" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Responsive -->
+      <div class="sm:hidden flex items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="flex sm:hidden">
+          <button type="button" onclick="toggleHamburguerMenu()">
+            <i
+              id="hamburguerIcon"
+              class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
+            ></i>
+            <i
+              id="closeIcon"
+              class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="linkPages"
+        class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
+      >
+        <div class="flex justify-center gap-6">
+          <a class="inactive-page" href="index.html">Home</a>
+          <a class="inactive-page" href="nosotros.html">Nosotros</a>
+          <a class="active-page" href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Directions -->
+    <section class="container-page px-3 py-8">
+      <h3 class="text-tertiary-color">
+        Estamos aquí para ayudarte. Si tienes alguna pregunta, comentario o
+        necesitas asistencia, no dudes en ponerte en contacto con nosotros.
+        Puedes utilizar el formulario a continuación para enviarnos un mensaje y
+        te responderemos lo antes posible.
+      </h3>
+
+      <div
+        class="flex justify-center items-center flex-col md:flex-row md:gap-28 gap-8 md:my-24 my-7"
+      >
+        <article>
+          <img
+            src="/assets/icons/direction1.png"
+            class="w-24 mx-auto"
+            decoding="async"
+            loading="lazy"
+          />
+          <p class="text-secondary-color text-center mt-6">
+            soporte@vumeer.com
+          </p>
+        </article>
+
+        <article>
+          <img
+            src="/assets/icons/direction2.png"
+            class="w-24 mx-auto"
+            decoding="async"
+            loading="lazy"
+          />
+          <p class="text-secondary-color text-center mt-6">
+            Jirón las Gardenias | Casuarinas,
+            <span class="block">Santiago de Surco.</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Form Contáctanos -->
+    <main class="container-page px-3">
+      <form class="max-w-lg mx-auto">
+        <h2 class="text-primary-color text-center font-bold text-4xl mb-8">
+          Contáctanos
+        </h2>
+
+        <div class="mb-4">
+          <label class="text-tertiary-color">
+            <span>Nombre completo</span>
+            <input
+              class="w-full py-2 px-2 block border-2 border-secondary-color rounded-md outline-none"
+              type="text"
+              name="full_name"
+            />
+          </label>
+        </div>
+
+        <div class="mb-4">
+          <label class="text-tertiary-color">
+            <span>Correo electrónico</span>
+            <input
+              class="w-full py-2 px-2 block border-2 border-secondary-color rounded-md outline-none"
+              type="email"
+              name="email"
+            />
+          </label>
+        </div>
+
+        <div class="mb-4">
+          <label class="text-tertiary-color">
+            <span>Teléfono</span>
+            <input
+              class="w-full py-2 px-2 block border-2 border-secondary-color rounded-md outline-none"
+              type="tel"
+              name="phone"
+            />
+          </label>
+        </div>
+
+        <div class="mb-4">
+          <label class="text-tertiary-color">
+            <span>Mensaje</span>
+            <textarea
+              class="w-full py-2 px-2 block border-2 border-secondary-color rounded-md outline-none resize-none h-52"
+              type="tel"
+              name="message"
+            ></textarea>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center mb-4">
+          <button type="submit" class="btn btn-orange md:w-72 w-full">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Import Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
