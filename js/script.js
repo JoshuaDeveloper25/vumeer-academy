@@ -3,18 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // Stop checking element after first animation appareance
+          // Asegúrate de que la animación se activa cuando el elemento esté en el medio del viewport
+          const rect = entry.target.getBoundingClientRect();
+          const viewportHeight = window.innerHeight;
+
+          // Ajusta la lógica para que la animación se ejecute en la mitad del viewport
+          if (
+            rect.top < viewportHeight * 0.75 &&
+            rect.bottom > viewportHeight * 0.25
+          ) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Deja de observar el elemento después de la primera animación
+          }
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: [0.25, 0.75] } // Asegura que el elemento se considere visible en un 25% - 75% de su altura
   );
 
   document
     .querySelectorAll(
       ".translate-up, .translate-left, .translate-right, .translate-down, .translate-from-top-to-down, .rotate360"
     )
+
     .forEach((element) => {
       observer.observe(element);
     });
