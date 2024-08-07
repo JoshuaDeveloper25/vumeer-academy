@@ -62,203 +62,222 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="container-page px-3 py-4">
-      <!-- Desktop -->
-      <div class="sm:flex hidden items-center justify-between">
-        <div>
-          <a href="index.html">
+    <main class="relative">
+      <img
+        class="absolute -z-10"
+        src="./assets/img/figures-nosotros.png"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <!-- Navbar -->
+      <nav class="container-page px-3 py-4">
+        <!-- Desktop -->
+        <div class="sm:flex hidden items-center justify-between">
+          <div>
+            <a href="index.html">
+              <img
+                src="assets/img/vumeer-academy-logo.png"
+                decoding="async"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
+          <ul class="flex gap-10">
+            <li><a class="inactive-page" href="index.html">Home</a></li>
+            <li><a class="active-page" href="nosotros.html">Nosotros</a></li>
+            <li><a class="inactive-page" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Responsive -->
+        <div class="sm:hidden flex items-center justify-between">
+          <div>
+            <a href="index.html">
+              <img
+                src="assets/img/vumeer-academy-logo.png"
+                decoding="async"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
+          <div class="flex sm:hidden">
+            <button type="button" onclick="toggleHamburguerMenu()">
+              <i
+                id="hamburguerIcon"
+                class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
+              ></i>
+              <i
+                id="closeIcon"
+                class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="linkPages"
+          class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
+        >
+          <div class="flex justify-center gap-6">
+            <a class="inactive-page" href="index.html">Home</a>
+            <a class="active-page" href="nosotros.html">Nosotros</a>
+            <a class="inactive-page" href="contacto.html">Contacto</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Goals -->
+      <section class="container-page px-3 py-8">
+        <div class="flex flex-col md:flex-row gap-6 mt-10">
+          <article class="flex-1">
             <img
-              src="assets/img/vumeer-academy-logo.png"
+              src="/assets/icons/goal1.png"
+              class="w-24"
               decoding="async"
               loading="lazy"
             />
-          </a>
-        </div>
+            <h2 class="font-bold text-secondary-color mt-6">Misión</h2>
+            <p class="text-tertiary-color text-sm">
+              En la Academia Vumeer, nuestra misión es proporcionar a nuestros
+              miembros una formación exhaustiva en e-commerce, guiándolos desde
+              los conceptos básicos hasta alcanzar resultados tangibles y
+              exitosos. Nos comprometemos a ofrecer un aprendizaje accesible y
+              práctico, asegurando que cada estudiante tenga las herramientas y
+              el conocimiento necesario para construir y hacer crecer su propio
+              negocio en línea.
+            </p>
+          </article>
 
-        <ul class="flex gap-10">
-          <li><a class="inactive-page" href="index.html">Home</a></li>
-          <li><a class="active-page" href="nosotros.html">Nosotros</a></li>
-          <li><a class="inactive-page" href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-
-      <!-- Responsive -->
-      <div class="sm:hidden flex items-center justify-between">
-        <div>
-          <a href="index.html">
+          <article class="flex-1">
             <img
-              src="assets/img/vumeer-academy-logo.png"
+              src="/assets/icons/goal2.png"
+              class="w-24"
               decoding="async"
               loading="lazy"
             />
-          </a>
+            <h2 class="font-bold text-secondary-color mt-6">Visión</h2>
+            <p class="text-tertiary-color text-sm">
+              Nuestra visión es que la Academia Vumeer se convierta en la
+              referencia líder en educación de e-commerce en toda Latinoamérica.
+              Aspiramos a ser reconocidos por la efectividad de nuestros
+              programas y por los resultados alcanzados por nuestros alumnos.
+              Queremos que nuestras historias de éxito resuenen a lo largo de la
+              región, inspirando a más emprendedores a unirse a nuestra
+              comunidad y alcanzar sus metas.
+            </p>
+          </article>
         </div>
+      </section>
 
-        <div class="flex sm:hidden">
-          <button type="button" onclick="toggleHamburguerMenu()">
-            <i
-              id="hamburguerIcon"
-              class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
-            ></i>
-            <i
-              id="closeIcon"
-              class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
-            ></i>
-          </button>
-        </div>
-      </div>
+      <!-- Valores -->
+      <section class="container-page px-3 py-8">
+        <h2 class="text-primary-color text-center font-bold text-4xl">
+          Valores
+        </h2>
 
-      <div
-        id="linkPages"
-        class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
-      >
-        <div class="flex justify-center gap-6">
-          <a class="inactive-page" href="index.html">Home</a>
-          <a class="active-page" href="nosotros.html">Nosotros</a>
-          <a class="inactive-page" href="contacto.html">Contacto</a>
-        </div>
-      </div>
-    </nav>
+        <!-- Tarjetas de Valores -->
+        <article class="my-8">
+          <div class="image-container relative">
+            <img
+              src="assets/img/value1.png"
+              class="w-full h-64 object-cover rounded-[1.5rem]"
+              decoding="async"
+              loading="lazy"
+            />
+            <div
+              class="image-overlay flex justify-center items-center text-center"
+            >
+              <div class="md:px-0 px-5">
+                <p class="md:text-3xl text-xl font-semibold">Transparencia</p>
+                <div class="bg-white mx-auto h-2 w-72 rounded-md mt-2"></div>
+                <p
+                  class="max-w-3xl text-sm mx-auto text-center text-white mt-4"
+                >
+                  Valoramos la honestidad y la claridad en nuestra enseñanza.
+                  Nos aseguramos de que nuestros alumnos comprendan cada paso
+                  del proceso y evitamos atajos que puedan comprometer sus
+                  resultados a largo plazo. Creemos en una educación sincera y
+                  directa, que prepare a nuestros estudiantes para enfrentar y
+                  superar desafíos.
+                </p>
+              </div>
+            </div>
+            <div class="image-text">Transparencia</div>
+          </div>
 
-    <!-- Goals -->
-    <section class="container-page px-3 py-8">
-      <div class="flex flex-col md:flex-row gap-6 mt-10">
-        <article class="flex-1">
-          <img
-            src="/assets/icons/goal1.png"
-            class="w-24"
-            decoding="async"
-            loading="lazy"
-          />
-          <h2 class="font-bold text-secondary-color mt-6">Misión</h2>
-          <p class="text-tertiary-color text-sm">
-            En la Academia Vumeer, nuestra misión es proporcionar a nuestros
-            miembros una formación exhaustiva en e-commerce, guiándolos desde
-            los conceptos básicos hasta alcanzar resultados tangibles y
-            exitosos. Nos comprometemos a ofrecer un aprendizaje accesible y
-            práctico, asegurando que cada estudiante tenga las herramientas y el
-            conocimiento necesario para construir y hacer crecer su propio
-            negocio en línea.
-          </p>
+          <div class="image-container relative my-6">
+            <img
+              src="assets/img/value2.png"
+              class="w-full h-64 object-cover rounded-[1.5rem]"
+              decoding="async"
+              loading="lazy"
+            />
+            <div
+              class="image-overlay flex justify-center items-center text-center"
+            >
+              <div class="md:px-0 px-5">
+                <p class="md:text-3xl text-xl font-semibold">
+                  Resultados Tangibles
+                </p>
+                <div class="bg-white mx-auto h-2 w-72 rounded-md mt-2"></div>
+                <p
+                  class="max-w-3xl text-sm mx-auto text-center text-white mt-4"
+                >
+                  Valoramos la honestidad y la claridad en nuestra enseñanza.
+                  Nos aseguramos de que nuestros alumnos comprendan cada paso
+                  del proceso y evitamos atajos que puedan comprometer sus
+                  resultados a largo plazo. Creemos en una educación sincera y
+                  directa, que prepare a nuestros estudiantes para enfrentar y
+                  superar desafíos.
+                </p>
+              </div>
+            </div>
+            <div class="image-text">Resultados Tangibles</div>
+          </div>
+
+          <div class="image-container relative">
+            <img
+              decoding="async"
+              loading="lazy"
+              src="assets/img/value3.png"
+              class="w-full h-64 object-cover rounded-[1.5rem]"
+            />
+            <div
+              class="image-overlay flex justify-center items-center text-center"
+            >
+              <div class="md:px-0 px-5">
+                <p class="md:text-3xl text-xl font-semibold">Apoyo continúo</p>
+                <div class="bg-white mx-auto h-2 w-72 rounded-md mt-2"></div>
+                <p
+                  class="max-w-3xl text-sm mx-auto text-center text-white mt-4"
+                >
+                  Valoramos la honestidad y la claridad en nuestra enseñanza.
+                  Nos aseguramos de que nuestros alumnos comprendan cada paso
+                  del proceso y evitamos atajos que puedan comprometer sus
+                  resultados a largo plazo. Creemos en una educación sincera y
+                  directa, que prepare a nuestros estudiantes para enfrentar y
+                  superar desafíos.
+                </p>
+              </div>
+            </div>
+            <div class="image-text">Apoyo continúo</div>
+          </div>
         </article>
 
-        <article class="flex-1">
-          <img
-            src="/assets/icons/goal2.png"
-            class="w-24"
-            decoding="async"
-            loading="lazy"
-          />
-          <h2 class="font-bold text-secondary-color mt-6">Visión</h2>
-          <p class="text-tertiary-color text-sm">
-            Nuestra visión es que la Academia Vumeer se convierta en la
-            referencia líder en educación de e-commerce en toda Latinoamérica.
-            Aspiramos a ser reconocidos por la efectividad de nuestros programas
-            y por los resultados alcanzados por nuestros alumnos. Queremos que
-            nuestras historias de éxito resuenen a lo largo de la región,
-            inspirando a más emprendedores a unirse a nuestra comunidad y
-            alcanzar sus metas.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Valores -->
-    <section class="container-page px-3 py-8">
-      <h2 class="text-primary-color text-center font-bold text-4xl">Valores</h2>
-
-      <!-- Tarjetas de Valores -->
-      <article class="my-8">
-        <div class="image-container relative">
-          <img
-            src="assets/img/value1.png"
-            class="w-full h-64 object-cover rounded-[1.5rem]"
-            decoding="async"
-            loading="lazy"
-          />
-          <div
-            class="image-overlay flex justify-center items-center text-center"
-          >
-            <div class="md:px-0 px-5">
-              <p class="md:text-3xl text-xl font-semibold">Transparencia</p>
-              <div class="bg-white mx-auto h-2 w-72 rounded-md mt-2"></div>
-              <p class="max-w-3xl text-sm mx-auto text-center text-white mt-4">
-                Valoramos la honestidad y la claridad en nuestra enseñanza. Nos
-                aseguramos de que nuestros alumnos comprendan cada paso del
-                proceso y evitamos atajos que puedan comprometer sus resultados
-                a largo plazo. Creemos en una educación sincera y directa, que
-                prepare a nuestros estudiantes para enfrentar y superar
-                desafíos.
-              </p>
-            </div>
-          </div>
-          <div class="image-text">Transparencia</div>
-        </div>
-
-        <div class="image-container relative my-6">
-          <img
-            src="assets/img/value2.png"
-            class="w-full h-64 object-cover rounded-[1.5rem]"
-            decoding="async"
-            loading="lazy"
-          />
-          <div
-            class="image-overlay flex justify-center items-center text-center"
-          >
-            <div class="md:px-0 px-5">
-              <p class="md:text-3xl text-xl font-semibold">
-                Resultados Tangibles
-              </p>
-              <div class="bg-white mx-auto h-2 w-72 rounded-md mt-2"></div>
-              <p class="max-w-3xl text-sm mx-auto text-center text-white mt-4">
-                Valoramos la honestidad y la claridad en nuestra enseñanza. Nos
-                aseguramos de que nuestros alumnos comprendan cada paso del
-                proceso y evitamos atajos que puedan comprometer sus resultados
-                a largo plazo. Creemos en una educación sincera y directa, que
-                prepare a nuestros estudiantes para enfrentar y superar
-                desafíos.
-              </p>
-            </div>
-          </div>
-          <div class="image-text">Resultados Tangibles</div>
-        </div>
-
-        <div class="image-container relative">
-          <img
-            decoding="async"
-            loading="lazy"
-            src="assets/img/value3.png"
-            class="w-full h-64 object-cover rounded-[1.5rem]"
-          />
-          <div
-            class="image-overlay flex justify-center items-center text-center"
-          >
-            <div class="md:px-0 px-5">
-              <p class="md:text-3xl text-xl font-semibold">Apoyo continúo</p>
-              <div class="bg-white mx-auto h-2 w-72 rounded-md mt-2"></div>
-              <p class="max-w-3xl text-sm mx-auto text-center text-white mt-4">
-                Valoramos la honestidad y la claridad en nuestra enseñanza. Nos
-                aseguramos de que nuestros alumnos comprendan cada paso del
-                proceso y evitamos atajos que puedan comprometer sus resultados
-                a largo plazo. Creemos en una educación sincera y directa, que
-                prepare a nuestros estudiantes para enfrentar y superar
-                desafíos.
-              </p>
-            </div>
-          </div>
-          <div class="image-text">Apoyo continúo</div>
-        </div>
-      </article>
-
-      <p class="max-w-5xl mx-auto text-center text-sm text-tertiary-color mt-6">
-        En la Academia Vumeer, estamos comprometidos a transformar vidas a
-        través de la educación en e-commerce. Nos dedicamos a proporcionar una
-        formación de calidad que empodere a nuestros estudiantes a alcanzar sus
-        sueños y a contribuir al desarrollo económico de sus comunidades y de
-        toda Latinoamérica.
-      </p>
-    </section>
+        <p
+          class="max-w-5xl mx-auto text-center text-sm text-tertiary-color mt-6"
+        >
+          En la Academia Vumeer, estamos comprometidos a transformar vidas a
+          través de la educación en e-commerce. Nos dedicamos a proporcionar una
+          formación de calidad que empodere a nuestros estudiantes a alcanzar
+          sus sueños y a contribuir al desarrollo económico de sus comunidades y
+          de toda Latinoamérica.
+        </p>
+      </section>
+    </main>
 
     <!-- Import Javascript -->
     <script src="js/script.js"></script>
