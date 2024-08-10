@@ -19,45 +19,80 @@ body {
 }
 
 /* Animations for letters */
-@keyframes moveRight {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    transform: translateX(0);
+.wrapper {
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -400px;
   }
 }
 
-@keyframes moveLeft {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateX(0);
+@keyframes scrollRight {
+  to {
+    right: -200px;
   }
 }
 
-.animated-text span {
-  display: inline-block;
-  animation: moveRight 8s ease-in-out infinite;
+.item {
+  width: 300px;
+  height: 100px;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(150px * 14), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.animated-text:nth-child(2) span {
-  animation: moveLeft 8s ease-in-out infinite;
+.item-right {
+  width: 20px;
+  height: 100px;
+  border-radius: 6px;
+  position: absolute;
+  right: max(calc(150px * 14), 100%);
+  animation-name: scrollRight;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.animated-text:nth-child(3) span {
-  animation: moveRight 8s ease-in-out infinite;
+.item1 {
+  animation-delay: calc(60s / 8 * (8 - 1) * -1);
 }
 
-.animated-text:nth-child(4) span {
-  animation: moveLeft 8s ease-in-out infinite;
+.item2 {
+  animation-delay: calc(60s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(60s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(60s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(60s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(60s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(60s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(60s / 8 * (8 - 8) * -1);
 }
 
 /* Overlay al hover en valores - Página Nosotros */
@@ -107,7 +142,7 @@ body {
 .translate-down {
   opacity: 0;
   transform: translateY(20px); /* Por defecto, se mueve hacia abajo */
-  transition: opacity .6s ease-out, transform .6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .translate-up {
@@ -127,13 +162,13 @@ body {
 }
 
 .translate-from-top-to-down {
-  transition: opacity .6s ease-out, transform .6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   transform: translateY(-20rem); /* Se mueve desde abajo */
   opacity: 0;
 }
 
 .rotate360 {
-  transition: opacity .6s ease-out, transform .6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   transform: rotate(360deg); /* Se mueve desde abajo */
   opacity: 0;
 }

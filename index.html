@@ -122,12 +122,17 @@
     </nav>
 
     <main class="relative">
-      <img class="absolute " src="/assets/img/3-horns.png" loading="lazy" decoding="async" />
+      <img
+        class="absolute"
+        src="/assets/img/3-horns.png"
+        loading="lazy"
+        decoding="async"
+      />
 
       <!-- Header -->
       <header class="sticky z-20 container-page px-3 py-8">
-        <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
-          <article class="md:order-0 order-1">
+        <div class="flex flex-col md:flex-row items-center gap-4 md:px-0 px-7">
+          <article class="flex-1 md:order-0 order-1">
             <h1 class="text-4xl text-primary-color font-bold">
               Bienvenidos a la <span class="block">Academia Vumeer</span>
             </h1>
@@ -161,7 +166,7 @@
             />
           </article>
 
-          <article class="md:order-1 order-0 max-w-xl mx-auto">
+          <article class="flex-1 md:order-1 order-0 max-w-xl mx-auto">
             <img
               src="/assets/img/home-header.png"
               class="w-full h-full"
@@ -208,8 +213,8 @@
               />
               <h2 class="font-bold mt-2">Expertos en la Industria</h2>
               <p class="text-sm">
-                Aprende de profesionales con amplia experiencia y éxito comprobado
-                en el sector.
+                Aprende de profesionales con amplia experiencia y éxito
+                comprobado en el sector.
               </p>
             </article>
 
@@ -236,8 +241,8 @@
               />
               <h2 class="font-bold mt-2">Comunidad de Apoyo</h2>
               <p class="text-sm">
-                Únete a una red de emprendedores y profesionales que comparten tus
-                intereses y desafíos.
+                Únete a una red de emprendedores y profesionales que comparten
+                tus intereses y desafíos.
               </p>
             </article>
           </div>
@@ -247,7 +252,9 @@
 
     <!-- ¿Qué Ofrecemos? -->
     <section class="container-page px-3 py-8">
-      <h2 class="text-center text-primary-color font-bold text-4xl mb-12">
+      <h2
+        class="text-center text-primary-color font-bold text-4xl mb-12 translate-up"
+      >
         ¿Qué Ofrecemos?
       </h2>
 
@@ -334,7 +341,8 @@
             Fuente de ingreso Extra
           </h3>
           <p class="text-tertiary-color">
-            Por recomendación obtén un beneficio Cash Out «Sobre esto Obtén información con nuestro equipo de soporte
+            Por recomendación obtén un beneficio Cash Out «Sobre esto Obtén
+            información con nuestro equipo de soporte
           </p>
         </div>
       </article>
@@ -398,35 +406,83 @@
     </section>
 
     <!-- Publicidad -->
-    <section class="bg-[#282828] font-[900] text-center sm:text-8xl text-4xl py-7" style="overflow: hidden;">
-      <div class="text-nowrap">
-        <h2 class="text-white/20 mt-6 animated-text">
-          <span>C</span><span>R</span><span>E</span><span>A</span> <span class="text-white">C</span
-          ><span class="text-white">R</span><span class="text-white">E</span><span class="text-white">A</span> <span>C</span><span>R</span
-          ><span>E</span><span>A</span> <span>C</span><span>R</span><span>E</span
-          ><span>A</span>
-        </h2>
-  
-        <h2 class="text-white/20 mt-6 animated-text">
-          <span>G</span><span>E</span><span>S</span><span>T</span><span>I</span
-          ><span>O</span><span>N</span><span>A</span> <span class="text-white">G</span><span class="text-white">E</span
-          ><span class="text-white">S</span><span class="text-white">T</span><span class="text-white">I</span><span class="text-white">O</span><span class="text-white">N</span
-          ><span class="text-white">A</span>
-        </h2>
-  
-        <h2 class="text-white/20 mt-6 animated-text">
-          <span>V</span><span>E</span><span>N</span><span>D</span><span>E</span>
-            <span class="text-white">V</span><span class="text-white">E</span><span class="text-white">N</span><span class="text-white">D</span
-            ><span class="text-white">E</span></span>
-          <span>V</span><span>E</span><span>N</span><span>D</span><span>E</span>
-        </h2>
-  
-        <h2 class="text-white/20 mt-6 animated-text">
-          <span class="text-white">V</span><span class="text-white">U</span><span class="text-white">M</span><span class="text-white">M</span><span class="text-white">E</span
-          ><span class="text-white">R</span> <span>V</span><span>U</span><span>M</span><span>M</span><span>E</span
-            ><span>R</span> <span>V</span><span>U</span><span>M</span><span>M</span><span>E</span
-              ><span>R</span>
-        </h2>
+    <section
+      class="bg-[#282828] text-white/10 font-extrabold text-center sm:text-8xl text-6xl py-7"
+    >
+      <div class="wrapper">
+        <div class="item item1">
+          <h2 class="text-white">CREA</h2>
+        </div>
+        <div class="item item2">
+          <h2>CREA</h2>
+        </div>
+        <div class="item item3">
+          <h2 class="text-white">CREA</h2>
+        </div>
+        <div class="item item4">CREA</div>
+        <div class="item item5">
+          <h2 class="text-white">CREA</h2>
+        </div>
+        <div class="item item6">CREA</div>
+        <div class="item item7"><h2 class="text-white">CREA</h2></div>
+        <div class="item item8">CREA</div>
+      </div>
+
+      <div class="wrapper">
+        <div class="item-right item1">
+          <h2 class="text-white">GESTIONA</h2>
+        </div>
+        <div class="item-right item2">
+          <h2>GESTIONA</h2>
+        </div>
+        <div class="item-right item3">
+          <h2 class="text-white">GESTIONA</h2>
+        </div>
+        <div class="item-right item4">GESTIONA</div>
+        <div class="item-right item5">
+          <h2 class="text-white">GESTIONA</h2>
+        </div>
+        <div class="item-right item6">GESTIONA</div>
+        <div class="item-right item7"><h2 class="text-white">GESTIONA</h2></div>
+        <div class="item-right item8">GESTIONA</div>
+      </div>
+
+      <div class="wrapper">
+        <div class="item item1">
+          <h2 class="text-white">VENDE</h2>
+        </div>
+        <div class="item item2">
+          <h2>VENDE</h2>
+        </div>
+        <div class="item item3">
+          <h2 class="text-white">VENDE</h2>
+        </div>
+        <div class="item item4">VENDE</div>
+        <div class="item item5">
+          <h2 class="text-white">VENDE</h2>
+        </div>
+        <div class="item item6">VENDE</div>
+        <div class="item item7"><h2 class="text-white">VENDE</h2></div>
+        <div class="item item8">VENDE</div>
+      </div>
+
+      <div class="wrapper">
+        <div class="item-right item1">
+          <h2 class="text-white">VUMEER</h2>
+        </div>
+        <div class="item-right item2">
+          <h2>VUMEER</h2>
+        </div>
+        <div class="item-right item3">
+          <h2 class="text-white">VUMEER</h2>
+        </div>
+        <div class="item-right item4">VUMEER</div>
+        <div class="item-right item5">
+          <h2 class="text-white">VUMEER</h2>
+        </div>
+        <div class="item-right item6">VUMEER</div>
+        <div class="item-right item7"><h2 class="text-white">VUMEER</h2></div>
+        <div class="item-right item8">VUMEER</div>
       </div>
     </section>
 
@@ -447,15 +503,21 @@
     </section>
 
     <!-- Nuestros paquetes -->
-     <main class="relative">
-      <img class="absolute -top-[20rem] w-[65rem]" src="/assets/img/3-horns-alt.png" loading="lazy" decoding="async" />
+    <main class="relative">
+      <img
+        class="absolute -top-[20rem] w-[65rem]"
+        src="/assets/img/3-horns-alt.png"
+        loading="lazy"
+        decoding="async"
+      />
 
-      <section class="container-page px-3 md:my-12 my-5 translate-from-top-to-down relative">
-      
+      <section
+        class="container-page px-3 md:my-12 my-5 translate-from-top-to-down relative"
+      >
         <h2 class="text-primary-color font-bold text-4xl text-center">
           Nuestros paquetes
         </h2>
-  
+
         <div class="flex justify-center my-8">
           <div class="flex-1 text-center">
             <h3
@@ -469,18 +531,18 @@
               id="mensualTab"
             ></div>
           </div>
-  
+
           <div class="flex-1 text-center">
             <h3
               class="text-tertiary-color cursor-pointer"
               onclick="showPlan('anual')"
             >
-              Anual
+              Trimestral
             </h3>
             <div class="rounded-md bg-[#D9D9D9] w-full h-2" id="anualTab"></div>
           </div>
         </div>
-  
+
         <!-- Mensual Plan -->
         <article
           id="mensualPlan"
@@ -490,20 +552,22 @@
             <div
               class="text-white text-center rounded-xl inline-block bg-secondary-color px-8 py-3"
             >
-              <h2 class="text-4xl font-[900]">€15.00</h2>
-              <h4>Mes</h4>
+              <h2 class="text-4xl font-[900]">$100 USD</h2>
+              <h4>Mensual</h4>
             </div>
           </div>
-  
+
           <div>
             <div class="my-5 text-center">
-              <h3 class="font-bold text-xl text-secondary-color">
+              <h3 class="font-[900] text-xl text-secondary-color">
                 Clases Online 100% Online
               </h3>
               <h4 class="text-xs text-secondary-color">Ahorro anual 34.85€</h4>
             </div>
-  
-            <ul class="sm:px-16 px-8 text-sm list-disc text-tertiary-color mb-8">
+
+            <ul
+              class="sm:px-16 px-8 text-sm list-disc text-tertiary-color mb-8"
+            >
               <li>Creación de tienda</li>
               <li>Configuración de la tienda</li>
               <li>Aplicativo para incrementar Ventas</li>
@@ -519,14 +583,14 @@
               <li>BONO: Theme de Paga Premium "Gratis"</li>
             </ul>
           </div>
-  
+
           <button
             class="bg-secondary-color font-bold text-white py-4 w-full rounded-b-sm"
           >
             Escoger plan
           </button>
         </article>
-  
+
         <!-- Anual Plan -->
         <article
           id="anualPlan"
@@ -536,20 +600,22 @@
             <div
               class="text-white text-center rounded-xl inline-block bg-secondary-color px-8 py-3"
             >
-              <h2 class="text-4xl font-[900]">€150.00</h2>
-              <h4>Año</h4>
+              <h2 class="text-4xl font-[900]">$200 USD</h2>
+              <h4>Trimestral</h4>
             </div>
           </div>
-  
+
           <div>
             <div class="my-5 text-center">
-              <h3 class="font-bold text-xl text-secondary-color">
+              <h3 class="font-[900] text-xl text-secondary-color">
                 Clases Online 100% Online
               </h3>
               <h4 class="text-xs text-secondary-color">Ahorro anual 100.00€</h4>
             </div>
-  
-            <ul class="sm:px-16 px-8 text-sm list-disc text-tertiary-color mb-8">
+
+            <ul
+              class="sm:px-16 px-8 text-sm list-disc text-tertiary-color mb-8"
+            >
               <li>Creación de tienda</li>
               <li>Configuración de la tienda</li>
               <li>Aplicativo para incrementar Ventas</li>
@@ -565,7 +631,7 @@
               <li>BONO: Theme de Paga Premium "Gratis"</li>
             </ul>
           </div>
-  
+
           <button
             class="bg-secondary-color font-bold text-white py-4 w-full rounded-b-sm"
           >
@@ -573,14 +639,13 @@
           </button>
         </article>
       </section>
-  
-     </main>
-    
+    </main>
+
     <!-- Carta del Ceo & Fundador -->
     <header class="container-page px-3 py-8 mt-20">
       <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
         <article class="md:order-0 order-1">
-          <h1 class="text-4xl text-primary-color font-bold">
+          <h1 class="text-4xl text-primary-color font-[900]">
             Carta del CEO & <span class="block">Fundador</span>
           </h1>
 
@@ -623,11 +688,13 @@
 
     <!-- Nuestro equipo -->
     <section class="container-page px-3 py-8">
-      <h2 class="text-center text-primary-color font-bold text-4xl">
+      <h2 class="text-center text-primary-color font-[900] text-4xl">
         Nuestro equipo
       </h2>
 
-      <div class="grid justify-center items-center place-content-center place-items-center sm:grid-cols-2 md:grid-cols-4 gap-10 mt-16">
+      <div
+        class="grid justify-center items-center place-content-center place-items-center sm:grid-cols-2 md:grid-cols-4 gap-10 mt-16"
+      >
         <article>
           <img
             src="/assets/img/team1.png"
@@ -637,7 +704,7 @@
           />
 
           <div class="text-center px-5">
-            <h2 class="font-bold text-primary-color mt-2">Lord Dennis.</h2>
+            <h2 class="font-[900] text-primary-color mt-2">Lord Dennis.</h2>
             <p class="text-sm text-tertiary-color">
               Mentor: | Experto en E-Commerce |
             </p>
@@ -653,7 +720,7 @@
           />
 
           <div class="text-center px-5">
-            <h2 class="font-bold text-primary-color mt-2">Daniel Meza</h2>
+            <h2 class="font-[900] text-primary-color mt-2">Daniel Meza</h2>
             <p class="text-sm text-tertiary-color">
               Mentor: | Experto en E-Commerce |
             </p>
@@ -669,7 +736,7 @@
           />
 
           <div class="text-center px-5">
-            <h2 class="font-bold text-primary-color mt-2">Antonio Yataco</h2>
+            <h2 class="font-[900] text-primary-color mt-2">Antonio Yataco</h2>
             <p class="text-sm text-tertiary-color">
               Mentor: | Experto en E-Commerce |
             </p>
@@ -684,8 +751,10 @@
             loading="lazy"
           />
           <div class="text-center px-5">
-            <h2 class="font-bold text-primary-color mt-2">Omar Sánchez</h2>
-            <p class="text-sm text-tertiary-color">Mentor | Experto en E-Commerce |</p>
+            <h2 class="font-[900] text-primary-color mt-2">Omar Sánchez</h2>
+            <p class="text-sm text-tertiary-color">
+              Mentor | Experto en E-Commerce |
+            </p>
           </div>
         </article>
 
@@ -697,12 +766,35 @@
             loading="lazy"
           />
           <div class="text-center px-5">
-            <h2 class="font-bold text-primary-color mt-2">Rubén Viera</h2>
+            <h2 class="font-[900] text-primary-color mt-2">Rubén Viera</h2>
             <p class="text-sm text-tertiary-color">| Country Manager |</p>
           </div>
         </article>
       </div>
     </section>
+
+    <footer class="container-page px-3 py-8">
+      <div class="flex flex-wrap justify-center gap-6">
+        <a class="font-bold" href="https://ifols.com/pages/sobre-nosotros"
+          >Sobre nosotros</a
+        >
+        <a
+          class="font-bold"
+          href="https://ifols.com/pages/condiciones-de-servicio"
+          >Términos y Condiciones</a
+        >
+        <a
+          class="font-bold"
+          href="https://ifols.com/pages/politica-de-reembolso"
+          >Política de Reembolso</a
+        >
+        <a
+          class="font-bold"
+          href="https://ifols.com/pages/politicas-de-privacidad"
+          >Política de Privacidad</a
+        >
+      </div>
+    </footer>
 
     <!-- Import Javascript -->
     <script defer src="js/script.js"></script>
