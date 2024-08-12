@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vumeer Academy | Sobre Nosotros</title>
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/358a708f7a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#089D3C",
+              "secondary-color": "#EB670A",
+              "tertiary-color": "#727272",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tailwind Plugins and Custom -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .container-page {
+          @apply max-w-[1200px] mx-auto;
+        }
+
+        .active-page {
+          @apply border-b-4 border-primary-color pb-1 rounded-sm text-tertiary-color;
+        }
+
+        .inactive-page {
+          @apply text-tertiary-color;
+        }
+
+        .btn {
+          @apply inline-block rounded-2xl font-bold px-5 py-1;
+        }
+
+        .btn-orange {
+          @apply bg-secondary-color text-white;
+        }
+
+        .btn-orange-white {
+          @apply bg-white text-secondary-color;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="xl:overflow-x-visible overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="container-page px-3 py-4">
+      <!-- Desktop -->
+      <div class="sm:flex hidden items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <ul class="flex gap-10">
+          <li><a class="inactive-page" href="index.html">Home</a></li>
+          <li><a class="inactive-page" href="nosotros.html">Nosotros</a></li>
+          <li><a class="inactive-page" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Responsive -->
+      <div class="sm:hidden flex items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="flex sm:hidden">
+          <button type="button" onclick="toggleHamburguerMenu()">
+            <i
+              id="hamburguerIcon"
+              class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
+            ></i>
+            <i
+              id="closeIcon"
+              class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="linkPages"
+        class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
+      >
+        <div class="flex justify-center gap-6">
+          <a class="inactive-page" href="index.html">Home</a>
+          <a class="inactive-page" href="nosotros.html">Nosotros</a>
+          <a class="inactive-page" href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sobre Nosotros -->
+    <section class="container-page px-3 py-8">
+      <h2 class="text-center font-[800] text-5xl mb-24">Sobre nosotros</h2>
+
+      <div class="max-w-[700px] mx-auto">
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">Sobre nosotros</h3>
+          <p class="text-sm leading-7">
+            Bienvenido a VUMEER.COM, tu destino definitivo para aprender y
+            dominar el comercio electrónico. En Vumeer, estamos comprometidos a
+            proporcionarte una educación de alta calidad que te capacite para
+            alcanzar el éxito en el mundo del e-commerce, ya sea que estés
+            comenzando desde cero o buscando escalar tus ventas.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">¿Quiénes Somos?</h3>
+          <p class="text-sm leading-7">
+            Somos una academia online especializada en comercio electrónico, con
+            un equipo de mentores altamente experimentados y exitosos en el
+            campo. Nuestro objetivo es brindarte el conocimiento y las
+            herramientas necesarias para que puedas iniciar y gestionar tu
+            propio negocio de e-commerce con confianza y seguridad.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">¿Qué ofrecemos?</h3>
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="text-black/85 font-bold"
+                  >Aprendizaje desde cero:</span
+                >
+                Nuestros cursos están diseñados para personas sin experiencia
+                previa en comercio electrónico. Te llevamos de la mano desde los
+                conceptos básicos hasta estrategias avanzadas, asegurándonos de
+                que comprendas cada paso del proceso.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="text-black/85 font-bold"
+                  >Escalamientos de Ventas:</span
+                >
+                Si ya tienes una experiencia básica en e-commerce, nuestro
+                objetivo es ayudarte a escalar tus ventas. Proporcionamos
+                técnicas y tácticas avanzadas que han sido probadas y validadas
+                por nuestros mentores.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="text-black/85 font-bold"
+                  >Mentores con Resultados:</span
+                >
+                Nuestros mentores no solo enseñan, sino que también practican lo
+                que predican. Todos ellos tienen resultados demostrables en el
+                mundo del comercio electrónico, lo que te garantiza que
+                recibirás formación de personas que saben lo que están haciendo.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="text-black/85 font-bold"
+                  >Confianza y Seguridad:</span
+                >
+                En Vumeer, nos tomamos muy en serio la confianza y la seguridad.
+                Te ofrecemos un entorno de aprendizaje seguro y confiable, donde
+                puedes concentrarte en adquirir nuevas habilidades sin
+                preocuparte por nada más.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="text-black/85 font-bold"
+                  >Oportunidad de Comisiones:</span
+                >
+                Además de nuestra academia de e-commerce, ofrecemos una
+                oportunidad única para que recomiendes nuestros cursos a tus
+                amigos o familiares y obtengas una comisión por cada inscripción
+                que se realice a través de tu recomendación.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">Nuestra Misión:</h3>
+          <p class="text-sm leading-7">
+            La misión de Vumeer es ayudarte a obtener resultados reales. Nos
+            dedicamos a proporcionarte todo lo que necesitas para tener éxito en
+            el comercio electrónico, desde formación de calidad hasta apoyo
+            continuo y oportunidades adicionales para generar ingresos.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">Únete a Nosotros:</h3>
+          <p class="text-sm leading-7">
+            En VUMEER.COM, creemos que cualquiera puede tener éxito en el
+            comercio electrónico con la educación y el apoyo adecuados. Únete a
+            nosotros y comienza tu viaje hacia el éxito en el mundo del
+            e-commerce. Estamos aquí para ayudarte en cada paso del camino.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container-page px-3 py-8">
+      <div class="flex flex-wrap justify-center md:gap-16 gap-8">
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="sobre-nosotros.html"
+          >Sobre nosotros</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="condiciones-de-servicio.html"
+          >Términos y Condiciones</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="politica-de-reembolso.html"
+          >Política de Reembolso</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="politicas-de-privacidad.html"
+          >Política de Privacidad</a
+        >
+      </div>
+    </footer>
+
+    <!-- Import Javascript -->
+    <script defer src="js/script.js"></script>
+  </body>
+</html>

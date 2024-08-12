@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vumeer Academy | Política de Reembolso</title>
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/358a708f7a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#089D3C",
+              "secondary-color": "#EB670A",
+              "tertiary-color": "#727272",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tailwind Plugins and Custom -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .container-page {
+          @apply max-w-[1200px] mx-auto;
+        }
+
+        .active-page {
+          @apply border-b-4 border-primary-color pb-1 rounded-sm text-tertiary-color;
+        }
+
+        .inactive-page {
+          @apply text-tertiary-color;
+        }
+
+        .btn {
+          @apply inline-block rounded-2xl font-bold px-5 py-1;
+        }
+
+        .btn-orange {
+          @apply bg-secondary-color text-white;
+        }
+
+        .btn-orange-white {
+          @apply bg-white text-secondary-color;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="xl:overflow-x-visible overflow-x-hidden">
+    <!-- -- Navbar -->
+    <nav class="container-page px-3 py-4">
+      <!-- Desktop -->
+      <div class="sm:flex hidden items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <ul class="flex gap-10">
+          <li><a class="inactive-page" href="index.html">Home</a></li>
+          <li><a class="inactive-page" href="nosotros.html">Nosotros</a></li>
+          <li><a class="inactive-page" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Responsive -->
+      <div class="sm:hidden flex items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="flex sm:hidden">
+          <button type="button" onclick="toggleHamburguerMenu()">
+            <i
+              id="hamburguerIcon"
+              class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
+            ></i>
+            <i
+              id="closeIcon"
+              class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="linkPages"
+        class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
+      >
+        <div class="flex justify-center gap-6">
+          <a class="inactive-page" href="index.html">Home</a>
+          <a class="inactive-page" href="nosotros.html">Nosotros</a>
+          <a class="inactive-page" href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Política de Reembolso -->
+    <section class="container-page px-3 py-8">
+      <h2 class="text-center font-[800] leading-[1.2] text-5xl mb-24">
+        Política de Reembolso
+      </h2>
+
+      <div class="max-w-[700px] mx-auto">
+        <h3 class="font-semibold mb-4">
+          Política de Reembolso de VUMEER.COM - Academia de E-Commerce
+        </h3>
+        <h3 class="font-semibold mb-4">Última actualización: [06/08/2024]</h3>
+
+        <div class="mb-6">
+          <p class="text-sm leading-7">
+            En VUMEER.COM, estamos comprometidos con la satisfacción de nuestros
+            estudiantes y creemos en la eficacia de nuestros programas de
+            formación en E-Commerce. Sin embargo, entendemos que pueden surgir
+            circunstancias en las que un reembolso pueda ser necesario. A
+            continuación, se detallan las condiciones bajo las cuales ofrecemos
+            reembolsos.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">1. Condiciones para el Reembolso</h3>
+          <p class="text-sm leading-7 mb-4">
+            Ofrecemos un reembolso completo bajo las siguientes condiciones:
+          </p>
+
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Plazo:</span> El estudiante puede
+                solicitar un reembolso dentro de los 30 días a partir de la
+                fecha de inscripción en el curso.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Prueba de Esfuerzo:</span> El estudiante
+                debe demostrar que ha seguido todos los pasos y directrices del
+                curso sin obtener resultados. Esto incluye asistir a todas las
+                clases, completar todos los ejercicios y tareas, y participar
+                activamente en todas las actividades requeridas.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Verificación en ZOOM:</span> La
+                solicitud de reembolso debe ir acompañada de una reunión de
+                verificación por Zoom. Durante esta reunión, el estudiante
+                deberá presentar pruebas reales y verificables de que ha seguido
+                todos los pasos del curso. Esto puede incluir capturas de
+                pantalla, documentos y cualquier otra evidencia pertinente.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">2. Exclusión del Reembolso</h3>
+          <p class="text-sm leading-7 mb-4">
+            No se otorgará reembolso en los siguientes casos:
+          </p>
+
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Resultados Positivos:</span> Si el
+                estudiante ha realizado al menos una venta como resultado del
+                curso, no será elegible para un reembolso. Nuestro objetivo es
+                enseñar a vender, y cualquier venta, independientemente del
+                monto, demuestra que se han adquirido las habilidades enseñadas.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Falta de Participación:</span> Si el
+                estudiante no ha seguido activamente el curso, no ha asistido a
+                las clases, o no ha completado las tareas y ejercicios, no será
+                elegible para un reembolso.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">
+            3. Procedimiento para Solicitar un Reembolso
+          </h3>
+          <p class="text-sm leading-7 mb-4">
+            No se otorgará reembolso en los siguientes casos:
+          </p>
+
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Enviar una Solicitud:</span> Envía un
+                correo electrónico a soporte@vumeer.com dentro de los 30 días
+                posteriores a la inscripción, indicando tu deseo de solicitar un
+                reembolso y los motivos de la solicitud.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold"
+                  >Programar una Reunión de Verificación:</span
+                >
+                Un representante de VUMEER.COM programará una reunión por Zoom
+                para revisar tu solicitud y las pruebas de esfuerzo.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Presentar Pruebas:</span>
+                Durante la reunión por Zoom, presenta todas las pruebas
+                necesarias para demostrar que has seguido todos los pasos del
+                curso y no has obtenido resultados.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Evaluación de la Solicitud:</span>
+                Nuestro equipo revisará tu solicitud y las pruebas presentadas.
+                Si se determina que cumples con las condiciones de reembolso,
+                procesaremos tu reembolso dentro de los 14 días hábiles
+                siguientes.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">4. Contacto</h3>
+          <p class="text-sm leading-7">
+            Si tienes alguna pregunta o inquietud sobre nuestra Política de
+            Reembolso, por favor contáctanos a través de:
+          </p>
+        </div>
+
+        <p class="text-sm leading-7">
+          Correo electrónico: soporte@vumeer.com
+          <span class="block">WhatsApp: [MUY PRONTO]</span>
+        </p>
+      </div>
+    </section>
+
+    <footer class="container-page px-3 py-8">
+      <div class="flex flex-wrap justify-center md:gap-16 gap-8">
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="sobre-nosotros.html"
+          >Sobre nosotros</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="condiciones-de-servicio.html"
+          >Términos y Condiciones</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="politica-de-reembolso.html"
+          >Política de Reembolso</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="politicas-de-privacidad.html"
+          >Política de Privacidad</a
+        >
+      </div>
+    </footer>
+
+    <!-- Import Javascript -->
+    <script defer src="js/script.js"></script>
+  </body>
+</html>

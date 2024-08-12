@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vumeer Academy | Política de Privacidad</title>
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/358a708f7a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#089D3C",
+              "secondary-color": "#EB670A",
+              "tertiary-color": "#727272",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tailwind Plugins and Custom -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .container-page {
+          @apply max-w-[1200px] mx-auto;
+        }
+
+        .active-page {
+          @apply border-b-4 border-primary-color pb-1 rounded-sm text-tertiary-color;
+        }
+
+        .inactive-page {
+          @apply text-tertiary-color;
+        }
+
+        .btn {
+          @apply inline-block rounded-2xl font-bold px-5 py-1;
+        }
+
+        .btn-orange {
+          @apply bg-secondary-color text-white;
+        }
+
+        .btn-orange-white {
+          @apply bg-white text-secondary-color;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="xl:overflow-x-visible overflow-x-hidden">
+    <!-- -- Navbar -->
+    <nav class="container-page px-3 py-4">
+      <!-- Desktop -->
+      <div class="sm:flex hidden items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <ul class="flex gap-10">
+          <li><a class="inactive-page" href="index.html">Home</a></li>
+          <li><a class="inactive-page" href="nosotros.html">Nosotros</a></li>
+          <li><a class="inactive-page" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Responsive -->
+      <div class="sm:hidden flex items-center justify-between">
+        <div>
+          <a href="index.html">
+            <img
+              src="assets/img/vumeer-academy-logo.png"
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <div class="flex sm:hidden">
+          <button type="button" onclick="toggleHamburguerMenu()">
+            <i
+              id="hamburguerIcon"
+              class="fa-solid fa-bars fa-2x transition-transform duration-300 ease-in-out"
+            ></i>
+            <i
+              id="closeIcon"
+              class="fa-solid fa-times fa-2x hidden transition-transform duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="linkPages"
+        class="hidden sm:hidden flex-col items-center py-5 mt-3 gap-10 bg-gray-300 rounded-md"
+      >
+        <div class="flex justify-center gap-6">
+          <a class="inactive-page" href="index.html">Home</a>
+          <a class="inactive-page" href="nosotros.html">Nosotros</a>
+          <a class="inactive-page" href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Política de Privacidad -->
+    <section class="container-page px-3 py-8">
+      <h2 class="text-center font-[800] leading-[1.2] text-5xl mb-24">
+        Políticas de privacidad
+      </h2>
+
+      <div class="max-w-[700px] mx-auto">
+        <h3 class="font-semibold mb-4">
+          Política de Privacidad de VUMEER.COM - Academia de E-Commerce
+        </h3>
+        <h3 class="font-semibold mb-4">Última actualización: [06/08/2024]</h3>
+
+        <div class="mb-6">
+          <p class="text-sm leading-7">
+            En VUMEER.COM, nos comprometemos a proteger la privacidad de
+            nuestros estudiantes y usuarios. Esta Política de Privacidad explica
+            cómo recopilamos, utilizamos, divulgamos y protegemos la información
+            personal de nuestros usuarios. Al acceder y utilizar nuestro sitio
+            web, aceptas las prácticas descritas en esta política.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">1. Información que recopilamos</h3>
+          <p class="text-sm leading-7 mb-4">
+            Podemos recopilar la siguiente información personal de nuestros
+            estudiantes y usuarios:
+          </p>
+
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Información de contacto:</span> nombre,
+                dirección de correo electrónico, número de teléfono y dirección
+                postal.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Información académica:</span>
+                historial académico, cursos en los que estás inscrito y tu
+                progreso en los mismos.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Información de pago:</span> detalles de
+                la tarjeta de crédito u otros métodos de pago utilizados para
+                adquirir nuestros cursos.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Información de uso:</span> datos sobre
+                cómo los usuarios interactúan con nuestro sitio web, incluyendo
+                las páginas visitadas y las acciones realizadas.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Información técnica:</span> dirección
+                IP, tipo de navegador, proveedor de servicios de Internet (ISP),
+                páginas de referencia/salida y la fecha/hora.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">2. Cómo utilizamos la información</h3>
+          <p class="text-sm leading-7 mb-4">
+            La información recopilada se utiliza para los siguientes propósitos:
+          </p>
+
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold"
+                  >Proveer y mejorar nuestros servicios:</span
+                >
+                personalizar la experiencia del usuario y mejorar nuestros
+                cursos y recursos educativos.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Comunicación:</span> responder a
+                consultas, enviar actualizaciones, notificaciones relacionadas
+                con cursos y promociones.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Procesamiento de pagos:</span> gestionar
+                transacciones y prevenir fraudes.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Análisis y estadísticas:</span> analizar
+                cómo se utiliza nuestro sitio web y nuestros servicios para
+                mejorar su funcionalidad.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">3. Divulgación de la información</h3>
+          <p class="text-sm leading-7 mb-4">
+            No compartimos información personal con terceros, excepto en las
+            siguientes circunstancias:
+          </p>
+
+          <ul class="list-disc px-5">
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Proveedores de servicios:</span> podemos
+                compartir información con terceros que nos proporcionan
+                servicios como análisis de datos, procesamiento de pagos y
+                soporte al cliente.
+              </p>
+            </li>
+
+            <li class="mb-4">
+              <p class="leading-7 text-sm">
+                <span class="font-bold">Cumplimiento legal:</span>
+                podemos divulgar información personal si así lo requiere la ley
+                o si creemos de buena fe que dicha acción es necesaria para
+                cumplir con procedimientos legales, proteger nuestros derechos,
+                o prevenir fraudes.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">4. Seguridad de la Información</h3>
+          <p class="text-sm leading-7">
+            Implementamos medidas de seguridad para proteger la información
+            personal de nuestros usuarios contra el acceso no autorizado, la
+            alteración, la divulgación o la destrucción. Sin embargo, ninguna
+            transmisión de datos por Internet o método de almacenamiento
+            electrónico es completamente seguro.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">5. Derechos de los usuarios</h3>
+          <p class="text-sm leading-7">
+            Los usuarios tienen derecho a acceder, corregir, actualizar o
+            solicitar la eliminación de su información personal. Para ejercer
+            estos derechos, los usuarios pueden contactarnos a través de
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">6. Cookies y tecnologías similares</h3>
+          <p class="text-sm leading-7">
+            Utilizamos cookies y tecnologías similares para mejorar la
+            experiencia del usuario, analizar tendencias y administrar el sitio
+            web. Puedes configurar tu navegador para rechazar cookies, pero esto
+            puede afectar tu capacidad para utilizar ciertas funciones de
+            nuestro sitio web.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">
+            7. Cambios en la política de privacidad
+          </h3>
+          <p class="text-sm leading-7">
+            Nos reservamos el derecho de actualizar esta Política de Privacidad
+            en cualquier momento. Notificaremos a los usuarios sobre cualquier
+            cambio mediante la publicación de la nueva política en nuestro sitio
+            web y, si es necesario, a través de otros medios.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-4">8. Contacto</h3>
+          <p class="text-sm leading-7">
+            Si tienes alguna pregunta o inquietud sobre nuestra Política de
+            Privacidad, por favor contáctanos a través de:
+          </p>
+        </div>
+
+        <p class="text-sm leading-7">
+          Correo electrónico: soporte@vumeer.com
+          <span class="block">WhatsApp: [MUY PRONTO]</span>
+        </p>
+      </div>
+    </section>
+
+    <footer class="container-page px-3 py-8">
+      <div class="flex flex-wrap justify-center md:gap-16 gap-8">
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="sobre-nosotros.html"
+          >Sobre nosotros</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="condiciones-de-servicio.html"
+          >Términos y Condiciones</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="politica-de-reembolso.html"
+          >Política de Reembolso</a
+        >
+        <a
+          class="font-bold text-sm text-tertiary-color"
+          href="politicas-de-privacidad.html"
+          >Política de Privacidad</a
+        >
+      </div>
+    </footer>
+
+    <!-- Import Javascript -->
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
